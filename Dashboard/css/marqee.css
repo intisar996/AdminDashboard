@@ -1,0 +1,47 @@
+﻿* {
+    box-sizing: border-box;
+}
+
+body {
+    position: sticky;
+    margin: 0;
+}
+
+.marquee {
+    position: sticky; /* or use position: fixed; */
+    /*   overflow: hidden; */
+}
+
+.marquee-content {
+    position: sticky; /* or use position: fixed; */
+    display: flex;
+    animation: scrolling 10s linear infinite;
+}
+
+.marquee-item {
+    position: sticky; /* or use position: fixed; */
+    flex: 0 0 16vw;
+    margin: 0 1vw;
+    /*   flex: 0 0 20vw; */
+    /*   margin: 0 2vw; */
+}
+
+    .marquee-item img {
+        position: sticky; /* or use position: fixed; */
+        display: block;
+        width: 50%;
+        /*   padding: 0 20px; */
+    }
+
+@keyframes scrolling {
+
+    0% {
+        position: sticky; /* or use position: fixed; */
+        transform: translateX(0);
+    }
+
+    100% {
+        position: sticky; /* or use position: fixed; */
+        transform: translatex(144vw);
+    }
+}

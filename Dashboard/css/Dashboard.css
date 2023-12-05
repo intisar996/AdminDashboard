@@ -1,0 +1,637 @@
+﻿
+@import url("https://fonts.googleapis.com/css2?family=Lato:wght@400;700&family=Open+Sans:wght@300;400;600;700&display=swap");
+
+body, html {
+    line-height: 1.8;
+    font-family: "Open Sans", sans-serif;
+    color: #0c0c0c;
+    background-color: #ffffff;
+    text-transform: capitalize;
+    text-rendering: optimizeLegibility !important;
+    -webkit-font-smoothing: antialiased !important;
+    font-weight: 400;
+    margin: 0px;
+    padding: 0px;
+}
+
+h1, h2, h3, h4, h5, h6, .h1, .h2, .h3, .h4 {
+    font-weight: 400;
+    line-height: 1.5em;
+}
+
+p {
+    font-size: 15px;
+    margin: 12px 0 0;
+    line-height: 24px;
+}
+
+a {
+    color: #333;
+    font-weight: 400;
+}
+
+button:focus {
+    box-shadow: none;
+    outline: none;
+    border: none;
+}
+
+button {
+    cursor: pointer;
+}
+
+ul, ol {
+    padding: 0;
+    margin: 0px;
+    list-style: none;
+}
+
+a,
+a:hover,
+a:focus {
+    color: #333;
+    text-decoration: none;
+    transition: all 0.3s;
+}
+
+/*=======================================================
+  material-icons  copy & paste form site google material-icons
+  ==================================================*/
+
+@font-face {
+    font-family: 'Material Icons';
+    font-style: normal;
+    font-weight: 400;
+    src: url(https://example.com/MaterialIcons-Regular.eot); /* For IE6-8 */
+    src: local('Material Icons'), local('MaterialIcons-Regular'), url(https://example.com/MaterialIcons-Regular.woff2) format('woff2'), url(https://example.com/MaterialIcons-Regular.woff) format('woff'), url(https://example.com/MaterialIcons-Regular.ttf) format('truetype');
+}
+
+
+.material-icons {
+    font-family: 'Material Icons';
+    font-weight: normal;
+    font-style: normal;
+    font-size: 24px; /* Preferred icon size */
+    display: inline-block;
+    line-height: 1;
+    text-transform: none;
+    letter-spacing: normal;
+    word-wrap: normal;
+    white-space: nowrap;
+    direction: ltr;
+    /* Support for all WebKit browsers. */
+    -webkit-font-smoothing: antialiased;
+    /* Support for Safari and Chrome. */
+    text-rendering: optimizeLegibility;
+    /* Support for Firefox. */
+    -moz-osx-font-smoothing: grayscale;
+    /* Support for IE. */
+    font-feature-settings: 'liga';
+}
+
+.wrapper {
+    position: relative;
+    width: 100%;
+    overflow: auto;
+}
+/* ---------------------------------------------------
+    SIDEBAR STYLE start
+----------------------------------------------------- */
+li a {
+    text-align: right;
+}
+
+#sidebar {
+    position: fixed;
+    height: 100%;
+    top: 0;
+    bottom: 0;
+    right: 0;
+    width: 260px;
+    overflow: auto;
+    transition: all 0.3s;
+    background: #FFFFFF;
+    box-shadow: 0 10px 30px -12px rgb(0 0 0 / 42%), 0 4px 25px 0px rgb(0 0 0 / 12%), 0 8px 10px -5px rgb(0 0 0 / 20%);
+}
+
+    #sidebar::-webkit-scrollbar {
+        width: 5px;
+        border-radius: 10px;
+        background-color: #eee;
+        display: none;
+    }
+
+    #sidebar::-webkit-scrollbar-thumbs {
+        width: 5px;
+        border-radius: 10px;
+        background-color: #333;
+        display: none;
+    }
+
+    #sidebar:hover::-webkit-scrollbar {
+        display: block;
+    }
+
+    #sidebar:hover::-webkit-scrollbar-thumbs {
+        display: block;
+    }
+
+    #sidebar .sidebar-header {
+        padding: 20px;
+        background-color: #ffffff;
+        border-bottom: 1px solid #eee;
+    }
+
+.sidebar-header h3 {
+    gap: 4%;
+    color: #333;
+    font-size: 17px;
+    margin: 0px;
+    text-transform: uppercase;
+    transition: all 0.5s ease;
+    font-weight: 600;
+}
+
+    .sidebar-header h3 img {
+        width: 45px;
+        margin-right: 10px;
+    }
+
+#sidebar ul li {
+    padding: 2px 7px;
+}
+
+    #sidebar ul .li-list.active > a, #sidebar ul li.active i {
+        color: #ffffff;
+        background-color: #21409a;
+    }
+
+#sidebar ul .li-list:hover i,
+#sidebar ul .li-list:hover a{
+    color: #ffffff;
+}
+#sidebar ul .li-list:hover, .menu a:hover {
+    background-color: #21409a;
+    color: #ffffff;
+}
+
+
+.dropdown-toggle::after {
+    position: absolute;
+    right: 55%;
+    top: 45%;
+}
+
+#sidebar ul li.drodown {
+    position: sticky;
+}
+
+#sidebar ul.components {
+    padding: 20px 0;
+}
+
+#sidebar ul li a {
+    padding: 10px;
+    line-height: 30px;
+    border-radius: 5px;
+    font-size: 15px;
+    position: relative;
+    font-weight: 400;
+    display: block;
+}
+
+    #sidebar ul li a span {
+        text-transform: capitalize;
+        display: inline-block;
+    }
+
+    #sidebar ul li a i {
+        position: relative;
+        margin-right: 10px;
+        top: 5px;
+        color: #555555;
+        margin-left: 10px;
+    }
+/* ---------------------------------------------------
+   sidebar end
+----------------------------------------------------- */
+/*=======================================================
+   main-content navbar-design start
+   ===============================================*/
+
+#content {
+    position: relative;
+    transition: all 0.3s;
+}
+
+.top-navbar {
+    width: 100%;
+    z-index: 9;
+    position: relative;
+}
+
+.main-content {
+    padding: 10px 20px 0px 20px;
+    position: relative;
+    width: 100%;
+}
+
+.navbar {
+    background-color: #21409a;
+    color: #FFFFFF;
+}
+
+.navbar-brand {
+    color: #FFFFFF;
+}
+
+.navbar button {
+    background-color: transparent;
+    border: none;
+}
+
+    .navbar button span {
+        color: #fff;
+    }
+
+#sidebarCollapse {
+    padding: 6px;
+    position: absolute;
+    right: -2%;
+    z-index: 99;
+    border-radius: 50%;
+    width: 45px;
+    height: 45px;
+    text-align: center;
+    line-height: 45px;
+    margin-right: 20px;
+    border: none;
+    color: #FFFFFF;
+}
+
+    #sidebarCollapse span {
+        margin: 9px;
+        padding: 0px;
+    }
+
+.navbar-nav > li.active {
+    color: #FFFFFF;
+    border-radius: 4px;
+    background-color: rgba(0, 0, 0, 0.08);
+}
+
+.navbar-nav > li > a {
+    color: #FFFFFF;
+}
+
+.navbar .notification {
+    position: absolute;
+    top: 5px;
+    right: 10px;
+    display: block;
+    font-size: 9px;
+    border: 0px;
+    font-size: 10px;
+    background: #d9534f;
+    min-width: 15px;
+    text-align: center;
+    padding: 1px 5px;
+    height: 15px;
+    border-radius: 2px;
+    line-height: 14px;
+}
+
+.navbar-nav > li.show .dropdown-menu {
+    transform: translate3d(0, 0, 0);
+    opacity: 1;
+    visibility: visible;
+}
+
+.dropdown-menu li > a {
+    font-size: 13px;
+    padding: 10px 20px;
+    margin: 0 5px;
+    border-radius: 2px;
+    font-weight: 400;
+    transition: all 150ms linear;
+}
+
+.navbar-nav > .active > a:focus {
+    color: #FFFFFF;
+    background-color: rgba(0, 0, 0, 0.08);
+}
+
+.navbar-nav li a {
+    position: relative;
+    display: block;
+    padding: 10px 15px !important;
+}
+
+#sidebar.show-nav, .body-overlay.show-nav {
+    transform: translatex(0%);
+    opacity: 1;
+    display: block;
+    visibility: visible;
+    z-index: 15;
+}
+/*=======================================================
+   main-content navbar-design end
+   ===============================================*/
+
+/*=============================================
+  footer design start
+  =========================================*/
+
+.footer {
+    border-top: 1px solid #e7e7e7;
+}
+
+footer {
+    padding: 10px 0;
+    position: relative;
+    width: 82%;
+}
+
+    footer ul li {
+        display: inline-block;
+    }
+
+        footer ul li a {
+            color: inherit;
+            padding: 15px;
+            font-weight: 500;
+            font-size: 12px;
+            text-transform: uppercase;
+            border-radius: 3px;
+            text-decoration: none;
+            position: relative;
+            display: block;
+        }
+
+
+    footer .copyright {
+        padding: 15px;
+        font-size: 14px;
+        margin: 0;
+    }
+/*=============================================
+  footer design end
+  =========================================*/
+
+/* ---------------------------------------------------
+    MEDIAQUERIES
+----------------------------------------------------- */
+@media only screen and (min-width:992px) {
+    #sidebar.active {
+        width: 80px;
+        height: 100% !important;
+        position: absolute !important;
+        overflow: visible !important;
+        top: 0 !important;
+        z-index: 666;
+        float: left !important;
+        bottom: 0 !important;
+    }
+
+        #sidebar.active .sidebar-header h3 span {
+            display: none;
+            transition: all 0.5s ease;
+        }
+
+        #sidebar.active ul li a span {
+            display: none;
+            transition: all 0.5s ease;
+        }
+
+        #sidebar.active .dropdown-toggle::after {
+            display: none;
+            transition: all 0.5s ease;
+        }
+
+    #content {
+        width: calc(100% - 260px);
+        position: relative;
+        float: left;
+        transition: all 0.3s;
+        background-color: #EEEEEE;
+    }
+
+        #content.active {
+            width: calc(100% - 60px);
+        }
+
+    #sidebar.active .menu {
+        position: absolute;
+        left: 81px;
+        background-color: white;
+        width: 180px;
+        height: auto;
+        margin: 5px 0;
+        top: 0;
+        border: 1px solid #dcd9d9;
+        z-index: 4;
+    }
+}
+
+@media only screen and (min-width:992px) {
+    .dropdown-menu {
+        border: 0;
+        box-shadow: 0 2px 5px 0 rgb(0 0 0 / 26%);
+        transform: translate3d(0, -20px, 0);
+        visibility: hidden;
+        transition: all 150ms linear;
+        display: block;
+        min-width: 15rem;
+        right: 0;
+        opacity: 0;
+        -webkit-transition: all 150ms linear;
+        -moz-transition: all 150ms linear;
+        -ms-transition: all 150ms linear;
+        -o-transition: all 150ms linear;
+    }
+}
+
+/*===============small-screen overlay sidebar design media queries==============*/
+
+@media only screen and (max-width:992px) {
+    #sidebar {
+        position: fixed;
+        top: 0;
+        bottom: 0;
+        z-index: 10;
+        width: 260px;
+        transform: translatex(100%);
+        transition: all 150ms linear;
+        box-shadow: none !important;
+        -webkit-transform: translatex(100%);
+        -moz-transform: translatex(100%);
+        -ms-transform: translatex(100%);
+        -o-transform: translatex(100%);
+    }
+
+    .body-overlay {
+        position: fixed;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        display: none;
+        visibility: hidden;
+        opacity: 0;
+        z-index: 3;
+        transition: all 150ms linear;
+        background-color: rgba(0,0,0,0.5);
+    }
+}
+/*===============small-screen overlay sidebar design media queries==============*/
+
+/* ---------------------------------------------------
+    MEDIAQUERIES
+----------------------------------------------------- */
+
+/* ---------------------------------------------------
+    Profile Design
+----------------------------------------------------- */
+.form-control {
+    text-align: right;
+}
+
+.col-md-6 {
+    text-align: right;
+}
+
+.form-control:focus {
+    box-shadow: none;
+    border-color: #00204a
+}
+
+.profile-button {
+    background: #00204a;
+    box-shadow: none;
+    border: none
+}
+
+    .profile-button:hover {
+        background: #9ca2ab;
+    }
+
+    .profile-button:focus {
+        background: #21409a;
+        box-shadow: none
+    }
+
+    .profile-button:active {
+        background: #21409a;
+        box-shadow: none
+    }
+
+.back:hover {
+    color: #21409a;
+    cursor: pointer
+}
+
+.labels {
+    font-size: 18px
+}
+
+.add-experience:hover {
+    background: #21409a;
+    color: #fff;
+    cursor: pointer;
+    border: solid 1px #21409a
+}
+
+.profile-left {
+    background-color: #21409a;
+    color: #ffffff;
+}
+
+.btn-save {
+    appearance: button;
+    background-color: #00204a;
+    background-image: none;
+    border: 1px solid #000;
+    border-radius: 4px;
+    box-shadow: #fff 4px 4px 0 0,#000 4px 4px 0 1px;
+    box-sizing: border-box;
+    color: #fff;
+    cursor: pointer;
+    display: inline-block;
+    font-family: ITCAvantGardeStd-Bk,Arial,sans-serif;
+    font-size: 14px;
+    font-weight: 400;
+    line-height: 20px;
+    margin: 0 5px 10px 0;
+    overflow: visible;
+    padding: 12px 40px;
+    text-align: center;
+    text-transform: none;
+    touch-action: manipulation;
+    user-select: none;
+    -webkit-user-select: none;
+    vertical-align: middle;
+    white-space: nowrap;
+}
+
+    .btn-save:focus {
+        text-decoration: none;
+    }
+
+    .btn-save:hover {
+        text-decoration: none;
+    }
+
+    .btn-save:active {
+        box-shadow: rgba(0, 0, 0, .125) 0 3px 5px inset;
+        outline: 0;
+    }
+
+    .btn-save:not([disabled]):active {
+        box-shadow: #fff 2px 2px 0 0, #000 2px 2px 0 1px;
+        transform: translate(2px, 2px);
+    }
+
+@media (min-width: 768px) {
+    .btn-save {
+        padding: 12px 50px;
+    }
+    .col-md-9 {
+        max-width: 100%;
+    }
+    .sidebar-header h3 img {
+        width: 45px;
+        margin-right: -4%;
+    }
+
+}
+
+@media (max-width: 768px) {
+    .col-md-3 {
+        max-width: 100%;
+    }
+    .profileBox {
+        display:flex;
+        flex-direction:column;
+    }
+    .profileBox .mt-5{
+       margin-top: 1rem !important;
+      }
+      .profileBox .py-5 {
+            padding-top: 1rem !important;
+        }
+}
+@media (min-width: 1200px) {
+    .container {
+        width: 100%;
+    }
+ }
+@media (min-width: 992px) {
+    .container {
+        width: 100%;
+    }
+
+    footer {
+        width: 70%;
+        height: fit-content;
+    }
+}
